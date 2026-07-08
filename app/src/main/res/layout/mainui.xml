@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_gradient"
+    tools:context=".MainUiActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:contentDescription="Profile Picture" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="Welcome Back,"
+                android:textColor="@color/text_muted"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWelcome"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="6dp"
+                android:text="jaspreet Singh"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSearch"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@id/tvUserName"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:id="@+id/imgSearchIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/text_muted"
+                        android:contentDescription="Search Icon" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/imgSearchIcon"
+                        android:layout_marginStart="12dp"
+                        android:background="@null"
+                        android:hint="Search courses, chapters, notes..."
+                        android:inputType="text"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_muted"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvContinueTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardSearch"
+                android:layout_marginTop="28dp"
+                android:text="Continue Learning"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvContinueTitle"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvCourseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android App Development Basics"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_toStartOf="@+id/cardPlay"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvInstructor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCourseTitle"
+                        android:layout_marginTop="4dp"
+                        android:text="Instructor: Dr. Dev"
+                        android:textColor="#E0E7FF"
+                        android:textSize="12sp" />
+
+                    <ProgressBar
+                        android:id="@+id/courseProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_below="@id/tvInstructor"
+                        android:layout_marginTop="20dp"
+                        android:progress="65"
+                        android:progressTint="@color/white"
+                        android:progressBackgroundTint="#818CF8" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/courseProgress"
+                        android:layout_marginTop="8dp"
+                        android:text="65% Completed"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardPlay"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:cardCornerRadius="22dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_play"
+                            app:tint="@color/primary"
+                            android:contentDescription="Play Button" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvSubjectsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardProgress"
+                android:layout_marginTop="28dp"
+                android:text="Explore Subjects"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollSubjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSubjectsTitle"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_book"
+                                app:tint="@color/primary"
+                                android:contentDescription="Book" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Maths"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_book"
+                                app:tint="#EF4444"
+                                android:contentDescription="Book" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Physics"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_book"
+                                app:tint="#10B981"
+                                android:contentDescription="Book" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Coding"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvPopularTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollSubjects"
+                android:layout_marginTop="28dp"
+                android:text="Recommended for You"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPopularTitle"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imgCourseThumbnail"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_book"
+                        app:tint="@color/primary_accent"
+                        android:contentDescription="Course Icon" />
+
+                    <TextView
+                        android:id="@+id/tvRecCourseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/imgCourseThumbnail"
+                        android:layout_marginStart="16dp"
+                        android:text="Machine Learning Crash Course"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRecCourseTitle"
+                        android:layout_toEndOf="@id/imgCourseThumbnail"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="24 Lectures • 4.8 Rating"
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="8dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
