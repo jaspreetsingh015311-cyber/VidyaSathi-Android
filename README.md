@@ -2,6 +2,12 @@
 
 Vidya Sathi is a modern and premium Android application designed to accompany students in their learning and growth. The project currently features high-fidelity, beautifully-styled user interfaces (UI) and local user authentication flows.
 
+## Screenshots
+
+| Login Screen | Signup Screen |
+| :---: | :---: |
+| <img src="screenshots/login_screen.png" width="280" /> | <img src="screenshots/signup_screen.png" width="280" /> |
+
 ---
 
 ## Current App Flow & Screens
